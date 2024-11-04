@@ -4,9 +4,8 @@ public class Proveedor {
     private String nombre;
     private String pais;
 
-    public Proveedor(String nombre, String pais) {
-        this.nombre = nombre;
-        this.pais = pais;
+    public Proveedor() {
+
     }
 
     public String getNombre() {

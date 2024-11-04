@@ -3,8 +3,8 @@ package Clases;
 public class Camioneta extends Vehiculo{
     private String traccion;
 
-    public Camioneta(String traccion) {
-        this.traccion = traccion;
+    public Camioneta() {
+
     }
 
     public String getTraccion() {

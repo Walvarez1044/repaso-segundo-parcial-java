@@ -9,9 +9,10 @@ import java.util.List;
 public class Inventario<T extends Vehiculo> {
     private List<T> vehiculos;
 
-    public Inventario(List<T> vehiculos) {
+    public Inventario() {
         this.vehiculos = new ArrayList<>();
     }
+
 
     public List<T> getVehiculos() {
         return vehiculos;
@@ -47,19 +48,20 @@ public class Inventario<T extends Vehiculo> {
 //● Filtrar deportivos con más de 700 caballos de fuerza y
 // que tengan "Turbo" como una de sus características.
 
-    public List<Vehiculo> filtrarDeportivos (int potencia, String caracteristicas){
-        List<Vehiculo> deportivosFiltrados = new ArrayList<>();
+    public List<Deportivo> filtrarDeportivos (int potencia, String caracteristicas){
+        List<Deportivo> deportivosFiltrados = new ArrayList<>();
 
        for(Vehiculo v: vehiculos){
            if(v instanceof Deportivo d){
-               if(d.getPotencia()> potencia && d.getCaracteristicas().contains("turbo")){
+               if(d.getPotencia()> potencia && d.getCaracteristicas().contains("Turbo")){
                     deportivosFiltrados.add(d);
                }
            }
        }
-       if(deportivosFiltrados.isEmpty()){
-           throw new ExcepcionVehiculoNoRegistrado("No existe vehiculo registrado");
-       }
+        if(deportivosFiltrados.isEmpty()){
+            throw new ExcepcionVehiculoNoRegistrado("No existe vehiculo registrado");
+        }
+
        return deportivosFiltrados;
     }
 
@@ -71,7 +73,7 @@ public class Inventario<T extends Vehiculo> {
         List<Vehiculo> vehiculosFiltrados = new ArrayList<>();
 
         for(Vehiculo v : vehiculos){
-            if(v.getAnio()>=anio && !v.getProveedor().getPais().equals(paisProveedor) && v.getCaracteristicas()>=3){
+            if(v.getAnio()>=anio && !v.getProveedor().getPais().equals(paisProveedor) && v.getCaracteristicas().size()>=3){
                 vehiculosFiltrados.add(v);
             }
         }

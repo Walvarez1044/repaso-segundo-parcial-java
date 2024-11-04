@@ -2,17 +2,17 @@ package Clases;
 
 public class Deportivo extends Vehiculo{
 
-    private String potencia;
+    private int potencia;
 
-    public Deportivo(String potencia) {
-        this.potencia = potencia;
+    public Deportivo() {
+
     }
 
-    public String getPotencia() {
+    public int getPotencia() {
         return potencia;
     }
 
-    public void setPotencia(String potencia) {
+    public void setPotencia(int potencia) {
         this.potencia = potencia;
     }
 

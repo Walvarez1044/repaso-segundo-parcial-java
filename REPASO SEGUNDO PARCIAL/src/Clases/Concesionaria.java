@@ -34,7 +34,31 @@ public class Concesionaria {
         this.inventario = inventario;
     }
 
+    //metodos de filtrado
 
+    public void filtrado1(double precio){
+
+        System.out.println(inventario.filtrarXPrecioyProveedor(precio));
+    }
+
+    public void filtrado2(int potencia,String caracteristica){
+        System.out.println(inventario.filtrarDeportivos(potencia,caracteristica));
+    }
+
+    public void filtrado3(int anio,String nombreProveedor){
+        System.out.println(inventario.filtrarXanioXproveedotYxCaracteristica(anio,nombreProveedor));
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Concesionaria{" +
+                "nombre='" + nombre + '\'' +
+                ", ubicacion='" + ubicacion + '\'' +
+                ", inventario=" + inventario +
+                '}';
+    }
 }
 
 //Este sistema gestiona una colección de vehículos de alta gama,
