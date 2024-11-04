@@ -1,6 +1,7 @@
 package Clases;
 
-public class Deportivo extends Concesionaria{
+public class Deportivo extends Vehiculo{
+
     private String potencia;
 
     public Deportivo(String potencia) {

@@ -1,6 +1,6 @@
 package Clases;
 
-public class Auto extends Concesionaria{
+public class Auto extends Vehiculo{
     public Auto() {
     }
 

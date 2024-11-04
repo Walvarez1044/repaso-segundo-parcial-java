@@ -1,6 +1,6 @@
 package Clases;
 
-public class Camioneta extends Concesionaria{
+public class Camioneta extends Vehiculo{
     private String traccion;
 
     public Camioneta(String traccion) {
