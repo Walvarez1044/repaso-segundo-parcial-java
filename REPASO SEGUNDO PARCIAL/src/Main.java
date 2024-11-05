@@ -1,6 +1,12 @@
 import Clases.Concesionaria;
 import Clases.Inventario;
 import manejoJSON.GestionJSON;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +31,39 @@ public class Main {
 // no sea de "EEUU".
         System.out.println("VEHICULOS MAYORES 2020 CON MAS DE TRES CARACTERISTICAS QUE NO SEAN DE EEUU");
         c.filtrado3(2020,"Italia");
+
+        JSONArray JnuevoAuto = new JSONArray();
+        JSONObject JSONObject1 = new JSONObject();
+
+
+        try {
+            JSONObject1.put("nombre", "Concesionaria UTN");
+
+            JSONObject1.put("ubicacion", "Avenida Segundo Parcial 2024");
+
+            JSONArray Jvehiculos = new JSONArray();
+            JSONObject Jvehiculo = new JSONObject();
+
+            Jvehiculo.put("tipo", "Camioneta");
+            Jvehiculo.put("marca", "Ford");
+            Jvehiculo.put("modelo", "Ecosport");
+            Jvehiculo.put("precio", 6000);
+            Jvehiculo.put("anio", 2004);
+            Jvehiculo.put("traccion", "4x2");
+
+            JSONArray Jcaracteristicas = new JSONArray();
+            String[] caracteristica = {"Motor 1.6", "Aire acondicionado"};
+
+
+
+
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
 
 
     }
